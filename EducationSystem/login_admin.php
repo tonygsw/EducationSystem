@@ -100,7 +100,7 @@
                                                 <form method="post"  action="check_login_admin.php">
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
-                                                            <label for="admin_no">学号</label>
+                                                            <label for="admin_no">管理员账号</label>
                                                             <input  name="admin_no" type="text" class="form-control" id="textfield">
                                                         </div>
                                                     </div>

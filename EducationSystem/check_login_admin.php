@@ -32,7 +32,7 @@ if($number>0){
     $_SESSION["username"]=$row['admin_name'];
     $_SESSION["role"]="admin";
     $_SESSION["password"]=$password;
-    header("Location:stu/ShowCourse.php");
+    header("Location:admin/admin_fuction.php");
     echo"</script>";
 }else{
     echo"<script>";
