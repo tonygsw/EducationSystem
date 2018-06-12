@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-06-11 12:21:21
+Date: 2018-06-12 16:02:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -50,7 +50,7 @@ CREATE TABLE `class` (
 -- ----------------------------
 -- Records of class
 -- ----------------------------
-INSERT INTO `class` VALUES ('1504', '计科15004', '080100', '30');
+INSERT INTO `class` VALUES ('1504', '计科1504', '080100', '30');
 
 -- ----------------------------
 -- Table structure for course
@@ -62,6 +62,8 @@ CREATE TABLE `course` (
   `course_teacher_no` varchar(40) DEFAULT NULL,
   `course_maxnum` int(40) DEFAULT '100',
   `course_credit` int(40) NOT NULL,
+  `course_time` varchar(40) DEFAULT NULL,
+  `course_place` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`course_no`),
   KEY `a2` (`course_teacher_no`),
   CONSTRAINT `a2` FOREIGN KEY (`course_teacher_no`) REFERENCES `teacher` (`teacher_no`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -70,9 +72,10 @@ CREATE TABLE `course` (
 -- ----------------------------
 -- Records of course
 -- ----------------------------
-INSERT INTO `course` VALUES ('00000', '数据库', 't201508010412', '30', '4');
-INSERT INTO `course` VALUES ('00001', '编译原理', 't201508010413', '31', '3');
-INSERT INTO `course` VALUES ('00002', '算法', 't201508010413', '100', '4');
+INSERT INTO `course` VALUES ('00000', '数据库', 't201508010412', '30', '4', '周四3-4', '复409');
+INSERT INTO `course` VALUES ('00001', '编译原理', 't201508010413', '31', '3', '周二5-6', '中206');
+INSERT INTO `course` VALUES ('00002', '算法', 't201508010413', '100', '4', '周三1-2', '院330');
+INSERT INTO `course` VALUES ('00004', '云计算', 't201508010410', '50', '4', '周一1-2', '中106');
 
 -- ----------------------------
 -- Table structure for department
@@ -88,19 +91,20 @@ CREATE TABLE `department` (
 -- ----------------------------
 -- Records of department
 -- ----------------------------
-INSERT INTO `department` VALUES ('', null, '30');
 INSERT INTO `department` VALUES ('080100', 'CS', '10');
+INSERT INTO `department` VALUES ('080300', 'BigData', '30');
+INSERT INTO `department` VALUES ('260100', 'Software', '30');
 
 -- ----------------------------
 -- Table structure for grade
 -- ----------------------------
 DROP TABLE IF EXISTS `grade`;
 CREATE TABLE `grade` (
-  `class_no` varchar(40) NOT NULL,
+  `class_no` varchar(40) DEFAULT NULL,
   `course_no` varchar(40) NOT NULL,
   `student_no` varchar(40) NOT NULL,
   `student_name` varchar(40) DEFAULT NULL,
-  `grade` int(40) DEFAULT '-1',
+  `grade` int(40) NOT NULL DEFAULT '-1',
   PRIMARY KEY (`course_no`,`student_no`),
   KEY `2` (`student_no`),
   KEY `3` (`class_no`),
@@ -115,6 +119,9 @@ CREATE TABLE `grade` (
 -- Records of grade
 -- ----------------------------
 INSERT INTO `grade` VALUES ('1504', '00000', '201508010412', '甘世维', '100');
+INSERT INTO `grade` VALUES ('1504', '00001', '200000000000', 'hheh', '79');
+INSERT INTO `grade` VALUES ('1504', '00001', '201508010413', 'zouyue', '90');
+INSERT INTO `grade` VALUES ('1504', '00002', '201508010410', 'syj', '45');
 
 -- ----------------------------
 -- Table structure for student
@@ -141,8 +148,11 @@ CREATE TABLE `student` (
 -- ----------------------------
 -- Records of student
 -- ----------------------------
+INSERT INTO `student` VALUES ('0101', '我', '12345678', '2018-06-12', '1990-01-01', '1504', '080100', '男');
 INSERT INTO `student` VALUES ('200000000000', 'hheh', '12345678', '2018-01-01', '1990-01-01', '1504', '080100', '男');
+INSERT INTO `student` VALUES ('201508010410', 'syj', '123', '2018-01-01', '1990-01-01', '1504', '080100', '女');
 INSERT INTO `student` VALUES ('201508010412', '甘世维', '12345678', '2018-01-01', '1990-01-01', '1504', '080100', '男');
+INSERT INTO `student` VALUES ('201508010413', 'zouyue', '12345678', '2015-09-01', '1990-01-01', '1504', '080100', '女');
 
 -- ----------------------------
 -- Table structure for teacher
@@ -162,5 +172,7 @@ CREATE TABLE `teacher` (
 -- ----------------------------
 -- Records of teacher
 -- ----------------------------
-INSERT INTO `teacher` VALUES ('t201508010412', '12345678', '叶残风', '080100', null);
-INSERT INTO `teacher` VALUES ('t201508010413', '123456', '心安', '080100', null);
+INSERT INTO `teacher` VALUES ('t201508010410', '2333', 'ohh', '260100', '15364045335');
+INSERT INTO `teacher` VALUES ('t201508010412', '12345678', '叶残', '080100', '13389234567');
+INSERT INTO `teacher` VALUES ('t201508010413', '123456', '心安', '080100', '18923851234');
+INSERT INTO `teacher` VALUES ('t201526010112', '123', 'noo', '260100', '15111411455');

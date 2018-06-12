@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>湖大教务-学生登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -61,7 +61,7 @@
 
                 <div class="row">
                     <div class="col-sm-4 col-xs-12">
-                        <div id="gtco-logo"><a href="index.html">登录界面 <em>.</em></a></div>
+                        <div id="gtco-logo"><a href="index.html">学生登录界面 <em>.</em></a></div>
                     </div>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
@@ -115,6 +115,7 @@
                                                          <input type="submit" class="btn btn-primary" value="Login">
                                                      </div>
                                                     </div>
+
 
                                                 </form>
                                             </div>

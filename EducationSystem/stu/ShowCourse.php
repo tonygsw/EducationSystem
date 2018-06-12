@@ -10,7 +10,7 @@ if(!isset($_SESSION["username"])||$_SESSION["role"]!="student")
 //包含数据库连接文件
 include("../conn/db_conn.php");
 include("../conn/db_func.php");
-$student_no=$_SESSION['username'];
+$student_no=$_SESSION['userno'];
 $ShowCourse_sql="SELECT * from grade,course where grade.course_no=course.course_no and student_no='$student_no' ORDER BY course.course_no";
 $ShowCourseResult=db_query($conn,$ShowCourse_sql);
 ?>
@@ -86,14 +86,14 @@ $ShowCourseResult=db_query($conn,$ShowCourse_sql);
                 for($i=0;$i<$number;$i++){
                     $row=db_fetch_array($ShowCourseResult);
                     if($i>=$p && $i < $check){
-                        if($i%2 ==0)
+                        if(1)
                             echo"<tr bgcolor='#DDDDDD'>";
                         else
                             echo"<tr>";
-                        echo"<td width='220'>".$row['course_no']."</td>";
-                        echo"<td width='200'>".$row['course_name']."</td>";
-                        echo"<td width='200'>".$row['course_credit']."</td>";
-                        echo"<td width='200'>".$row['course_teacher_no']."</td>";
+                        echo"<td width='220'> <a class='h3_home wow fadeIn'>".$row['course_no']."</a></td>";
+                        echo"<td width='200'> <a class='h3_home wow fadeIn'>".$row['course_name']."</a></td>";
+                        echo"<td width='200'> <a class='h3_home wow fadeIn'>".$row['course_credit']."</a></td>";
+                        echo"<td width='200'> <a class='h3_home wow fadeIn'>".$row['course_teacher_no']."</a></td>";
                         echo"</tr>";
                         $j=$i+1;
                     }

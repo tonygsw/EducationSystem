@@ -14,8 +14,6 @@ global $conn;
 $sno=$_POST['teacher_no'];
 $password=$_POST['teacher_password'];
 
-echo $sno,$password;
-
 $ChkLogin="select * from teacher where teacher_no='$sno' and teacher_password='$password'";
 
 $ChkLoginResult=db_query($conn,$ChkLogin);
@@ -26,10 +24,12 @@ $row=db_fetch_array($ChkLoginResult);
 
 if($number>0){
     echo"<script>";
-    echo  "进入";
-    $_SESSION["username"]=$sno;
+    session_start();
+    $_SESSION["userno"]=$sno;
+    $_SESSION["username"]=$row['teacher_name'];
     $_SESSION["role"]="teacher";
-    header("Location:stu/ShowCourse.php");
+    $_SESSION["password"]=$password;
+    header("Location:tea/teacher_function.php");
     echo"</script>";
 }else{
     echo"<script>";

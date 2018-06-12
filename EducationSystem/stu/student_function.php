@@ -1,7 +1,7 @@
 <?php
 session_start();
 //检测是否登录，若没登录则转向登录界面
-if(!isset($_SESSION["username"]))
+if(!isset($_SESSION["userno"])||$_SESSION["role"]!="student")
 {
     header("Location:../login_student.php");
     exit();
@@ -98,7 +98,7 @@ if(!isset($_SESSION["username"]))
                 <img  class="rotate" src="../img/student/grade.png" alt="Generic placeholder image">
                 <h3>成绩查询</h3>
                 <p class="lead">
-                    <a href="showgrade.php">查看所有课程成绩</a>
+                    <a href="showscore1.php">查看所有课程成绩</a>
                 </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
@@ -106,7 +106,9 @@ if(!isset($_SESSION["username"]))
             <div class="col-sm-4 wow fadeInDown text-center">
                 <img  class="rotate" src="../img/icon/retina.svg" alt="Generic placeholder image">
                 <h3>同班同学</h3>
-                <p class="lead">查看班级情况</p>
+                <p class="lead">
+                    <a href="showclassmate.php">查看班级情况</a>
+                </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
 
@@ -118,7 +120,7 @@ if(!isset($_SESSION["username"]))
                 <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
                 <h3>院系老师查询</h3>
                 <p class="lead">
-                    <a href="#">查看本院老师</a>
+                    <a href="http://csee.hnu.edu.cn/xygk/szll.htm">查看本院老师</a>
                 </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
@@ -126,7 +128,8 @@ if(!isset($_SESSION["username"]))
             <div class="col-sm-4 wow fadeInDown text-center">
                 <img  class="rotate" src="../img/icon/map.svg" alt="Generic placeholder image">
                 <h3>密码修改</h3>
-                <p class="lead">修改登录密码</p>
+                <p class="lead">
+                    <a href="Changepwdd.php">修改登录密码</p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
 

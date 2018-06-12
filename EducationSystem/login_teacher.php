@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>湖大教务-教师登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -100,7 +100,7 @@
                                                 <form method="post"  action="check_login_teacher.php">
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
-                                                            <label for="teacher_no">学号</label>
+                                                            <label for="teacher_no">工号</label>
                                                             <input  name="teacher_no" type="text" class="form-control" id="textfield">
                                                         </div>
                                                     </div>

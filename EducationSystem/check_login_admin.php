@@ -27,8 +27,11 @@ $row=db_fetch_array($ChkLoginResult);
 if($number>0){
     echo"<script>";
     echo  "进入";
-    $_SESSION["username"]=$sno;
+    session_start();
+    $_SESSION["userno"]=$sno;
+    $_SESSION["username"]=$row['admin_name'];
     $_SESSION["role"]="admin";
+    $_SESSION["password"]=$password;
     header("Location:stu/ShowCourse.php");
     echo"</script>";
 }else{

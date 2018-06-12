@@ -1,9 +1,9 @@
 <?php
 session_start();
 //检测是否登录，若没登录则转向登录界面
-if(!isset($_SESSION["username"]))
+if(!isset($_SESSION["userno"])||$_SESSION["role"]!='teacher')
 {
-    header("Location:../login_student.php");
+    header("Location:../login_teacher.php");
     exit();
 }
 ?>
@@ -17,10 +17,10 @@ if(!isset($_SESSION["username"]))
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="学生功能选择界面">
-    <meta name="author" content="HUN-goodgoodstudy-gswycf">
+    <meta name="description" content="教师功能选择界面">
+    <meta name="author" content="HNU-goodgoodstudy-gswycf">
 
-    <title>湖南大学 – 学生功能选择界面</title>
+    <title>湖南大学 – 教师功能选择界面</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@ if(!isset($_SESSION["username"]))
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://www.hnu.edu.cn/">湖南大学</a>
+            <a class="navbar-brand" href="../index.html">湖南大学</a>
         </div>
 
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
@@ -64,7 +64,7 @@ if(!isset($_SESSION["username"]))
 
                 <li class="menuItem">欢迎
                     <?php
-                    echo $_SESSION["username"]
+                    echo $_SESSION["username"];
                     ?>
                     老师</li>
             </ul>
@@ -98,15 +98,17 @@ if(!isset($_SESSION["username"]))
                 <img  class="rotate" src="../img/student/grade.png" alt="Generic placeholder image">
                 <h3>成绩录入</h3>
                 <p class="lead">
-                    <a href="showgrade.php">录入成绩</a>
+                    <a href="insert_grade.php">录入成绩</a>
                 </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
 
             <div class="col-sm-4 wow fadeInDown text-center">
                 <img  class="rotate" src="../img/icon/retina.svg" alt="Generic placeholder image">
-                <h3>同班同学</h3>
-                <p class="lead">查看班级情况</p>
+                <h3>更新成绩</h3>
+                <p class="lead">
+                    <a href="update_grade.php">修改分数</a>
+                </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
 
@@ -118,7 +120,7 @@ if(!isset($_SESSION["username"]))
                 <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
                 <h3>院系老师查询</h3>
                 <p class="lead">
-                    <a href="#">查看本院老师</a>
+                    <a href="showColleague.php">查看本系老师</a>
                 </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
@@ -126,15 +128,18 @@ if(!isset($_SESSION["username"]))
             <div class="col-sm-4 wow fadeInDown text-center">
                 <img  class="rotate" src="../img/icon/map.svg" alt="Generic placeholder image">
                 <h3>密码修改</h3>
-                <p class="lead">修改登录密码</p>
+                <p class="lead">
+                    <a href="Changepwd.php">修改登录密码</a>
+                </p>
+                <!--
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
 
             <div class="col-sm-4 wow fadeInDown text-center">
                 <img  class="rotate" src="../img/icon/browser.svg" alt="Generic placeholder image">
-                <h3>回到主页</h3>
+                <h3>注册学生信息</h3>
                 <p class="lead">
-                    <a href="../index.html">主页</a>
+                    <a href="add.php">这里注册</a>
                 </p>
                 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
             </div><!-- /.col-lg-4 -->
