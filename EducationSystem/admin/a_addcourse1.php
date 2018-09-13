@@ -45,8 +45,6 @@ else{
     echo "location.href=\"../admin/a_addcourse.php\"";
     echo"</script>";
 }
-
-
 ?>
 </body>
 </html>

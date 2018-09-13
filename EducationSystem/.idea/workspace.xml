@@ -27,15 +27,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a_minusteacher1.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/a_minusteacher1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Changepwd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/Changepwd.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,11 +63,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a_addcourse1.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="a_addcourse1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/a_addcourse1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="354">
+              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="149" column="57" lean-forward="true" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -196,7 +196,7 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-34" />
     <option name="y" value="235" />
     <option name="width" value="1383" />
@@ -207,6 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,26 +215,10 @@
               <item name="EducationSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="EducationSystem" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="EducationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EducationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EducationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EducationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="stu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EducationSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EducationSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="tea" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,11 +308,13 @@
       <workItem from="1528807403420" duration="43000" />
       <workItem from="1528807500440" duration="3114000" />
       <workItem from="1528898121442" duration="86000" />
+      <workItem from="1529830434084" duration="27000" />
+      <workItem from="1529830503906" duration="697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60678000" />
+    <option name="totallyTimeSpent" value="61402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -339,9 +326,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14372164" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32838285" />
@@ -356,9 +343,9 @@
       <window_info anchor="bottom" id="找到" order="8" weight="0.13703099" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
       <window_info anchor="bottom" id="运行" order="7" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="bottom" id="更改" order="7" />
@@ -409,13 +396,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login_student.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2750">
@@ -603,8 +583,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/a_addcourse1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="354">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="149" column="57" lean-forward="true" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
         </state>
       </provider>
     </entry>
